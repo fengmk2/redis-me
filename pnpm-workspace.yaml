@@ -2,3 +2,17 @@ allowBuilds:
   '@parcel/watcher': true
   esbuild: true
   vue-demi: true
+catalog:
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.4fd595565e1b44be3b8218943e0ec5ae7d08889d
+  vitest: 4.1.9
+  vite-plus: 0.0.0-commit.4fd595565e1b44be3b8218943e0ec5ae7d08889d
+overrides:
+  vite: 'catalog:'
+  vitest: 'catalog:'
+peerDependencyRules:
+  allowAny:
+    - vite
+    - vitest
+  allowedVersions:
+    vite: '*'
+    vitest: '*'

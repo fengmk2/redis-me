@@ -4,16 +4,10 @@ import { open, save } from '@tauri-apps/plugin-dialog'
 
 import { buildTimestampedFileName } from '@/utils/export'
 
-const props = withDefaults(
-  defineProps<{
-    filePrefix?: string
-    fileSuffix?: string
-  }>(),
-  {
-    filePrefix: '',
-    fileSuffix: '',
-  },
-)
+const props = withDefaults(defineProps<{ filePrefix?: string; fileSuffix?: string }>(), {
+  filePrefix: '',
+  fileSuffix: '',
+})
 const model = defineModel<string>({ default: '' })
 
 async function openDialog(): Promise<void> {
